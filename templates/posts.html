@@ -1,0 +1,9 @@
+{% extends "index.html" %}
+{% block posts %}
+{% for post in posts|sort(attribute='time',reverse = True) %}
+<h3>{{ post['name'] }}</h3>
+<h4>{{ post['author'] }}</h4>
+<p>{{ post['text'] }}</p>
+<p>{{ post['time'] }}</p>
+{% endfor %}
+{% endblock %}

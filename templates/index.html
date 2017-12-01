@@ -1,0 +1,26 @@
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+  <head>
+    {% if title %}
+    <title>{{title}} - microblor</title>
+    {% else %}
+		<title>Welcome to {{title}}</title>
+    {% endif %}
+  </head>
+  <body>
+			<h1>Hello {{ user }}!</h1>
+			<h4> {{ page }} </h4>
+			<a href="/">home</a>
+			<a href="/add">add</a>
+			<a href="/account">dashboard</a>
+			<a href="/logout">logout</a>
+			<a href="/reg">sign up</a>
+			<a href="/login">sign in</a>
+			{% block posts %}{% endblock %}
+			{% block addpost %}{% endblock %}
+			{% block registration %}{% endblock %}
+			{% block login %}{% endblock %}
+			{% block account %}{% endblock %}
+	</body>
+</html>

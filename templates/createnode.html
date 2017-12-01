@@ -1,0 +1,9 @@
+{% extends "account.html" %}
+{% block nodecreate %}
+<h6>CREATE NODE</h6>
+<form method="POST">
+		<p>pool name:</p> <input type=text name=poolName>
+		<p>node name:</p> <input type=text name=nodeName>
+		<p><input type=submit value="Create node">
+</form>
+{% endblock %}

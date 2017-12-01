@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+{% block login %}
+<h3>Enter your credentials</h3>
+<form method="POST">
+	<p>Username: <input type=text name=username>
+  <p>Password: <input type=password name=password>
+  <p><input type=submit value=Login>
+</form>
+{% if status is defined %}
+<h4>{{ status }}
+{% endif %}
+{% endblock %}

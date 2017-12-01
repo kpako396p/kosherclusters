@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+{% block account %}
+
+<h4> Welcome to your account {{ session['username'] }}</h4>
+		<a href="/account/node">New node</a>
+		<a href="/account/cluster">New cluster</a>
+		<a href="/account/manage">Manage</a>
+		<a href="/account/monitor">Monitor</a>
+{% block nodecreate %}{% endblock %}
+{% for node in nodes %}
+	<p>{{ node['name'] }}</p>
+{% endfor %}
+{% endblock %}
